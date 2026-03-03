@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Body, UseGuards, Request } from '@nestjs/common';
+import { Controller, Post, Get, Body, UseGuards, Request, HttpCode } from '@nestjs/common';
 import {
   ApiTags,
   ApiOperation,
@@ -24,6 +24,7 @@ export class AuthController {
   }
 
   @Post('login')
+  @HttpCode(200)
   @ApiOperation({ summary: 'Login and receive JWT' })
   @ApiResponse({ status: 200, description: 'Returns access_token' })
   @ApiResponse({ status: 401, description: 'Invalid credentials' })
