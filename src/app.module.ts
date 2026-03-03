@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
 import { AuthModule } from './auth/auth.module';
 import { ShiftsModule } from './shifts/shifts.module';
+import { AttendanceModule } from './attendance/attendance.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { ShiftsModule } from './shifts/shifts.module';
     DatabaseModule,
     AuthModule,
     ShiftsModule,
+    AttendanceModule,
   ],
   controllers: [AppController],
   providers: [AppService],
